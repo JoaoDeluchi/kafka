@@ -56,3 +56,23 @@ Having more consumers can increase throughput.
 
 If the number of consumers exceeds the number of partitions, some consumers will be idle. It is best to match the number of partitions with the number of consumers.
 [not actively consuming any messages because there are no partitions assigned]
+
+
+# Command Line 
+
+Go to the kafka container using the command: 
+[docker exec -it kafka-kafka-1 bash] 
+
+## Create topic 
+
+[kafka-topics --create --topic=topicname --bootstrap-server=localhost:9092 --partitions=3]
+
+## List topics
+
+[kafka-topics --list --bootstrap-server=localhost:9092]
+
+## Get Details of the topic
+
+[kafka-topics --bootstrap-server=localhost:9092 --topic=topicname --describe]
+
+
