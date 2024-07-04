@@ -1,5 +1,3 @@
-Here's a refined version of your Kafka README:
-
 # Kafka 
 
 ## Topic 
