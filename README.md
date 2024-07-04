@@ -61,18 +61,38 @@ If the number of consumers exceeds the number of partitions, some consumers will
 # Command Line 
 
 Go to the kafka container using the command: 
-[docker exec -it kafka-kafka-1 bash] 
+```` Bash
+docker exec -it kafka-kafka-1 bash
+```` 
 
 ## Create topic 
 
-[kafka-topics --create --topic=topicname --bootstrap-server=localhost:9092 --partitions=3]
+```` Bash
+kafka-topics --create --topic=topicname --bootstrap-server=localhost:9092 --partitions=3
+````
 
 ## List topics
 
-[kafka-topics --list --bootstrap-server=localhost:9092]
+```` Bash
+kafka-topics --list --bootstrap-server=localhost:9092
+````
 
 ## Get Details of the topic
 
-[kafka-topics --bootstrap-server=localhost:9092 --topic=topicname --describe]
+```` Bash
+kafka-topics --bootstrap-server=localhost:9092 --topic=topicname --describe
+````
 
+## Start consumer assigned to a topic 
+
+```` Bash
+kafka-console-consumer --bootstrap-server=localhost:9092 --topic=topicname
+````
+
+## Start producer 
+
+```` Bash
+kafka-console-producer --bootstrap-server=localhost:9092 --topic=topicname
+````
+***can use parameter --from-beginning
 
