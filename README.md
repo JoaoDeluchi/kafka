@@ -88,11 +88,25 @@ kafka-topics --bootstrap-server=localhost:9092 --topic=topicname --describe
 ```` Bash
 kafka-console-consumer --bootstrap-server=localhost:9092 --topic=topicname
 ````
+can use parameters 
+    --group=groupname
+    --from-beginning
 
 ## Start producer 
 
 ```` Bash
 kafka-console-producer --bootstrap-server=localhost:9092 --topic=topicname
 ````
-***can use parameter --from-beginning
+
+## Get details from the consumer group 
+
+```` Bash
+kafka-consumer-groups --bootstrap-server=localhost:9092 --group=groupname --describe
+````
+
+# Confluent Control Center (interface web)
+
+access localhost:9021 com o container up
+
+
 
