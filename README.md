@@ -109,4 +109,17 @@ kafka-consumer-groups --bootstrap-server=localhost:9092 --group=groupname --desc
 access localhost:9021 com o container up
 
 
+## Global Configuration Properties 
+
+
+Property                          | Importance | Description
+----------------------------------|------------|--------------------------------------------------------------------------
+bootstrap.servers                 | HIGH       | One or more broker host servers
+client.id                         | low        | Identifier, type string 
+delivery.timeout.ms               | HIGH       | Limits time that a produce message wait for successfull delivery, type int
+acks or request.required.acks	  | HIGH       | 0, 1 or -1 description in the producer session / Message Delivery Guarantees.
+enable.idempotence                | HIGH       | does the messages be produced exactly once and in the original produce order? 
+
+more information - https://github.com/confluentinc/librdkafka/blob/master/CONFIGURATION.md
+
 
