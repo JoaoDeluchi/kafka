@@ -106,7 +106,7 @@ kafka-consumer-groups --bootstrap-server=localhost:9092 --group=groupname --desc
 
 # Confluent Control Center (interface web)
 
-access localhost:9021 com o container up
+access localhost:9021 with the container running
 
 
 ## Global Configuration Properties 
