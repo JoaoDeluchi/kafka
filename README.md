@@ -120,6 +120,48 @@ delivery.timeout.ms               | HIGH       | Limits time that a produce mess
 acks or request.required.acks	  | HIGH       | 0, 1 or -1 description in the producer session / Message Delivery Guarantees.
 enable.idempotence                | HIGH       | does the messages be produced exactly once and in the original produce order? 
 
-more information - https://github.com/confluentinc/librdkafka/blob/master/CONFIGURATION.md
+### more information - https://github.com/confluentinc/librdkafka/blob/master/CONFIGURATION.md
 
 
+# Kafka Connect 
+
+## Connectors 
+
+### Source 
+
+Connectors that allow you to get data from databases or any data source. Ex: Oracle, GCP Pub/Sub, Amazon SQS and etc.
+
+### Sink
+
+Connectors that allow you to save data in databases, queues and any data source. Ex: Azure Data Lake Storage, GCP Functions, ServiceNow, Datadog 
+
+### Transform
+
+How th
+
+
+#### Link to discover Connectors - https://www.confluent.io/hub/?utm_medium=sem&utm_source=google&utm_campaign=ch.sem_br.nonbrand_tp.prs_tgt.kafka-connectors_mt.xct_rgn.latam_sbrgn.brazil_lng.eng_dv.all_con.connectors_con.kafka_connect&utm_term=kafka%20connect%20connectors&creative=&device=c&placement=&gad_source=1&gclid=Cj0KCQjwyL24BhCtARIsALo0fSA5dmvUPQBOpfmmZOxrav95cD35ElvwmzS_JpHCjLhoHMjrpz5h0SYaAoicEALw_wcB
+
+
+
+Can use the control center to help to work with Kafka Connect 
+
+## Setup a connector 
+
+can be created based on configs that confluent provides or created from a file .properties, examples: 
+- /connectors/mysql.properties 
+- /connector/mongodb.properties 
+
+In the mongodb connector file, you can see a simple example with the transform connector
+
+# Confluent Cloud 
+
+## Can choose a cloud provider to create an cluster (AWS, AZURE, GCP)
+
+After create a cluster confluent cloud will provides the CLI documentation and everything you need to work with kafka in the cloud provider chosen. 
+
+Can be created a free cluster to study, but be carefull. The enterprise / professional signature is expansive. 
+
+### AWS - Amazon MSK / Managed Streaming for Apache Kafka 
+
+AWS provides an cheapier way to work with kafka streams in AWS. Its just for streams, and dont provide any help or support to others Confluent Services.
